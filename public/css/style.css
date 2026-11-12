@@ -385,11 +385,11 @@ ul { list-style: none; }
    ════════════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: calc(100vh - 6.75rem);
+  min-height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.5rem 0 0;
+  justify-content: center;
+  padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, var(--slate-50) 0%, var(--blue-50) 100%);
 }
@@ -419,27 +419,30 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-/* Full Width 100% Inner Container */
+/* Full Width 100% Inner Container - Vertically Centered (Middle) */
 .hero__inner {
   position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: clamp(1.5rem, 3.5vw, 4rem);
-  align-items: end;
+  align-items: center; /* Teks dan visual selaras middle secara vertikal */
   width: 100%;
   max-width: 100%;
   padding-left: clamp(1.5rem, 4.5vw, 5rem);
   padding-right: clamp(1.5rem, 4.5vw, 5rem);
   flex: 1;
+  min-height: calc(100vh - 72px);
 }
 
-/* Left: copy */
+/* Left: copy - Posisi Middle Vertikal (Bukan di Bawah) */
 .hero__copy {
-  padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  align-self: center; /* Posisi middle vertikal */
   gap: 1.25rem;
   max-width: 580px;
 }
@@ -518,31 +521,34 @@ ul { list-style: none; }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
 .hero__proof-text { font-size: 0.6875rem; color: var(--slate-400); line-height: 1.4; }
 
-/* Right: image composition */
+/* Right: image composition (Grounded bottom, 90% Height) */
 .hero__visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
+  height: 100%;
+  align-self: end; /* Grounded di bawah sedangkan teks kiri di middle */
 }
 
 .hero__img-wrapper {
   position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-/* Blue circle decoration behind the person (scaled +20%) */
+/* Blue circle decoration behind the person (Proporsional dengan gambar 90% height) */
 .hero__circle {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: min(530px, 72vh);
-  height: min(530px, 72vh);
+  width: min(650px, 84vh);
+  height: min(650px, 84vh);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.07) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
@@ -550,29 +556,30 @@ ul { list-style: none; }
   z-index: 1;
   pointer-events: none;
 }
-/* Inner ring accent (scaled +20%) */
+/* Inner ring accent */
 .hero__circle::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(420px, 58vh);
-  height: min(420px, 58vh);
+  width: min(510px, 68vh);
+  height: min(510px, 68vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Enlarged image (+20% from 520px to 630px) */
+/* Hero image (90% Height, Fit & Grounded) */
 .hero__img-wrapper img {
   width: auto;
   max-width: 100%;
-  height: auto;
-  max-height: min(635px, 78vh);
+  height: 90vh;
+  max-height: 90vh;
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
+  object-position: bottom center;
 }
 
 /* Floating cards */
@@ -2027,9 +2034,10 @@ ul { list-style: none; }
     gap: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    min-height: auto;
   }
   .hero__copy {
-    padding-bottom: 0;
+    padding: 1rem 0 0;
     align-items: center;
     max-width: 620px;
     margin: 0 auto;
@@ -2037,7 +2045,7 @@ ul { list-style: none; }
   .hero__sub { max-width: 520px; margin: 0 auto; }
   .hero__actions { justify-content: center; }
   .hero__proof { justify-content: center; }
-  .hero__img-wrapper img { max-height: 480px; }
+  .hero__img-wrapper img { height: auto; max-height: 480px; }
   .hero__circle { width: 400px; height: 400px; }
   .hero__circle::after { width: 310px; height: 310px; }
   .float-card--top { right: 5%; }
