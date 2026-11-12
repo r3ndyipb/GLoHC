@@ -1181,49 +1181,156 @@ ul { list-style: none; }
   background: #fff;
 }
 .coach__banner {
-  background: linear-gradient(135deg, var(--blue-600), #38bdf8);
+  background: linear-gradient(135deg, var(--blue-600) 0%, #0284c7 50%, #38bdf8 100%);
   border-radius: var(--radius-2xl);
   padding: 3rem;
   color: #fff;
-  box-shadow: 0 16px 48px rgba(12,135,235,0.2);
+  box-shadow: 0 20px 50px rgba(12, 135, 235, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+.coach__banner::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 .coach__grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 270px 1.2fr 1fr;
   gap: 2.5rem;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .coach__photo {
+  position: relative;
   width: 100%;
-  max-width: 240px;
-  aspect-ratio: 5/6;
-  border-radius: var(--radius-xl);
+  max-width: 270px;
+  height: 330px;
+  background: #ffffff;
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
-  border: 3px solid rgba(255,255,255,0.3);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  border: 3px solid rgba(255, 255, 255, 0.45);
   margin: 0 auto;
 }
-.coach__photo img { width: 100%; height: 100%; object-fit: cover; }
+.coach__photo::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(12, 135, 235, 0.14) 0%, rgba(12, 135, 235, 0.03) 70%, transparent 100%);
+  pointer-events: none;
+}
+.coach__photo img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding-top: 10px;
+}
 
 .coach__copy { display: flex; flex-direction: column; gap: 0.875rem; }
-.coach__copy h3 { font-size: 1.625rem; font-weight: 800; letter-spacing: -0.02em; }
-.coach__copy p  { font-size: 0.875rem; color: rgba(255,255,255,0.85); line-height: 1.65; }
 
-.coach__stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.coach__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.875rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.coach__badge-dot {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: #7dd3fc;
+  box-shadow: 0 0 8px #7dd3fc;
+}
+
+.coach__copy h3 {
+  font-size: 1.625rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.coach__copy p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.65;
+}
+.coach__action { margin-top: 0.25rem; }
+
+/* Right side rows (Volume One template style) */
+.coach__rows {
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
-  margin-top: 0.5rem;
 }
-.coach__stat {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.1);
+.coach__row {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-lg);
-  padding: 0.75rem;
-  text-align: center;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
 }
-.coach__stat strong { font-size: 1.125rem; font-weight: 800; display: block; }
-.coach__stat span  { font-size: 0.625rem; color: rgba(255,255,255,0.7); }
+.coach__row:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(4px);
+}
+.coach__row-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+.coach__row-icon svg { width: 1.125rem; height: 1.125rem; }
+.coach__row-text { display: flex; flex-direction: column; gap: 0.125rem; }
+.coach__row-text strong {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+.coach__row-text span {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.35;
+}
 
 /* ══════════════════════════════════════════
    FAQ
@@ -1644,7 +1751,10 @@ ul { list-style: none; }
   .about__photo { max-width: 400px; margin: 0 auto; }
 
   .program__grid { grid-template-columns: 1fr; }
-  .coach__grid   { grid-template-columns: 1fr; }
+  .coach__grid   { grid-template-columns: 1fr; gap: 2rem; }
+  .coach__photo  { max-width: 260px; height: 320px; }
+  .coach__copy   { text-align: center; align-items: center; max-width: 640px; margin: 0 auto; }
+  .coach__rows   { max-width: 540px; margin: 0 auto; width: 100%; text-align: left; }
   .waitlist__inner { grid-template-columns: 1fr; }
 
   .news__grid { grid-template-columns: 1fr 1fr; }
@@ -1694,7 +1804,14 @@ ul { list-style: none; }
   .program__banner { padding: 2rem 1.5rem; }
   .program__info h2 { font-size: 1.75rem; }
 
-  .coach__stats { grid-template-columns: 1fr 1fr; }
+  .coach__banner { padding: 2rem 1.25rem; }
+  .coach__copy h3 { font-size: 1.375rem; }
+  .coach__photo { max-width: 220px; height: 280px; }
+  .coach__row { padding: 0.625rem 0.875rem; gap: 0.75rem; }
+  .coach__row-icon { width: 2rem; height: 2rem; }
+  .coach__row-icon svg { width: 1rem; height: 1rem; }
+  .coach__row-text strong { font-size: 0.8125rem; }
+  .coach__row-text span { font-size: 0.625rem; }
 
   .form-row { grid-template-columns: 1fr; }
 
@@ -1714,7 +1831,6 @@ ul { list-style: none; }
   .news__item-img { width: 100%; height: 160px; min-height: auto; }
 
   .value-grid { grid-template-columns: 1fr; }
-  .coach__stats { grid-template-columns: 1fr 1fr; }
 
   .topbar { font-size: 0.6875rem; flex-wrap: wrap; }
 }
