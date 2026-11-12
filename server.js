@@ -16,6 +16,23 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+// Dedicated pages
+app.get('/program', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'program.html'));
+});
+
+app.get('/jadwal', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'jadwal.html'));
+});
+
+app.get('/master-coach', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'master-coach.html'));
+});
+
+app.get('/faq', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'faq.html'));
+});
+
 // Waitlist API endpoint
 app.post('/api/waitlist', (req, res) => {
   const { name, whatsapp, businessName, businessType, participantCount } = req.body;
