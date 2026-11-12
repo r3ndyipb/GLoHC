@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GloHC — Global Hospitality Coach | Service Excellence Training Indonesia</title>
+  <meta name="description" content="Transformasi standar layanan bisnis F&B, hotel, dan retail Anda bersama Global Hospitality Coach (GloHC). Pelatihan berbasis 70% simulasi praktisi nyata." />
+
+  <!-- Fonts: Inter (clean, professional, slim) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ TOP NOTIFICATION BAR ═══ -->
+  <div class="topbar">
+    <span class="topbar__badge">COMING SOON</span>
+    <span>Pendaftaran Batch 1 <strong>Service Excellence Workshop</strong> — 50 Kursi Pertama!</span>
+    <a href="#waitlist">Akses Prioritas &rarr;</a>
+  </div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <a href="#" class="logo">
+        <div class="logo__icon">G</div>
+        <div class="logo__text">
+          <span class="logo__name">GloHC</span>
+          <span class="logo__sub">Global Hospitality Coach</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">Tentang Kami</a>
+        <a href="#framework">Metodologi</a>
+        <a href="#program">Program</a>
+        <a href="#target">Target Peserta</a>
+        <a href="#coaches">Master Coach</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#waitlist" class="header__cta btn btn--primary btn--sm">Join Waitlist</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about">Tentang Kami</a>
+      <a href="#framework">Metodologi</a>
+      <a href="#program">Program</a>
+      <a href="#target">Target Peserta</a>
+      <a href="#coaches">Master Coach</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="btn btn--primary">Join Waitlist Batch 1</a>
+    </div>
+  </header>
+
+  <!-- ═══ HERO SECTION ═══ -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+
+    <div class="container hero__inner">
+
+      <!-- Copy -->
+      <div class="hero__copy">
+
+        <div class="pill pill--blue">
+          <span class="pill__dot pill__dot--pulse"></span>
+          Pelatihan Hospitality Berbasis Praktisi Terbaik Indonesia
+        </div>
+
+        <h1 class="hero__headline">
+          Ciptakan Standar Layanan <span>Kelas Dunia</span> untuk Bisnis Anda.
+        </h1>
+
+        <p class="hero__sub">
+          Transformasi tim operasional Anda bersama <strong>Global Hospitality Coach (GloHC)</strong>. Kami membekali staf F&B, hotel, dan bisnis jasa dengan keterampilan <em>Service Excellence</em> yang praktis, terukur, dan langsung berdampak pada loyalitas pelanggan.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#waitlist" class="btn btn--primary">
+            <span>Join Workshop Waitlist</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#program" class="btn btn--outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+            <span>Lihat Silabus</span>
+          </a>
+        </div>
+
+        <div class="hero__proof">
+          <div class="hero__avatars">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&h=96&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=96&h=96&q=80" alt="">
+            <div class="more">+500</div>
+          </div>
+          <div>
+            <div class="hero__stars">
+              <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.19H19l-5.3 4.12L15.68 18 10 14.27 4.32 18l1.98-6.69L1 7.19h6.61z"/></svg>
+              <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.19H19l-5.3 4.12L15.68 18 10 14.27 4.32 18l1.98-6.69L1 7.19h6.61z"/></svg>
+              <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.19H19l-5.3 4.12L15.68 18 10 14.27 4.32 18l1.98-6.69L1 7.19h6.61z"/></svg>
+              <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.19H19l-5.3 4.12L15.68 18 10 14.27 4.32 18l1.98-6.69L1 7.19h6.61z"/></svg>
+              <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.19H19l-5.3 4.12L15.68 18 10 14.27 4.32 18l1.98-6.69L1 7.19h6.61z"/></svg>
+            </div>
+            <p class="hero__proof-text">Praktisi F&B, Barista &amp; Hotelier Indonesia</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Visual -->
+      <div class="hero__visual">
+        <div class="hero__img-wrapper">
+
+          <!-- Decorative arch -->
+          <div class="hero__arch"></div>
+
+          <!-- Hero image (user-provided) -->
+          <img src="/images/hero-coaches.png" alt="GloHC Master Coaches" />
+
+          <!-- Floating card: Repeat Orders -->
+          <div class="float-card float-card--top">
+            <div class="float-card__icon float-card__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div>
+              <p class="float-card__label">Repeat Orders</p>
+              <p class="float-card__value">+38.5%</p>
+            </div>
+          </div>
+
+          <!-- Floating card: 70% Roleplay -->
+          <div class="float-card float-card--bottom">
+            <div class="float-card__dot"></div>
+            <div>
+              <p class="float-card__label-inline">
+                <span class="float-card__dot"></span>
+                Metode Nyata
+              </p>
+              <p class="float-card__text"><strong>70% Simulasi</strong> &amp; Roleplay, 30% Teori Taktis.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SOCIAL PROOF LOGOS ═══ -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos__label">Dirancang &amp; Dipercaya Oleh Jaringan Praktisi Hospitality Terkemuka</p>
+      <div class="logos__row">
+        <div class="logos__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+          <span>Specialty Coffee</span>
+        </div>
+        <div class="logos__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+          <span>F&amp;B Restaurants</span>
+        </div>
+        <div class="logos__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+          <span>Boutique Hotels</span>
+        </div>
+        <div class="logos__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span>Aesthetic Clinics</span>
+        </div>
+        <div class="logos__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>Luxury Retail</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <section class="pain">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="pill pill--red">Tantangan Bisnis Nyata</span>
+        <h2>Produk Hebat Saja Tidak Cukup Tanpa Pelayanan yang Membekas.</h2>
+        <p>Sebagian besar tamu yang kecewa tidak pernah mengajukan keluhan—mereka hanya pergi dalam diam dan tidak pernah kembali lagi.</p>
+      </div>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card__icon card__icon--red">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="8" y2="13"/><line x1="22" x2="17" y1="8" y2="13"/></svg>
+          </div>
+          <h3>Tamu Hanya Datang Sekali</h3>
+          <p>Pengalaman servis yang dingin dan terkesan enggan melayani membuat tamu tidak pernah kembali.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--amber">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          </div>
+          <h3>Panik di Jam Sibuk</h3>
+          <p>Komunikasi tim pecah saat pesanan menumpuk, wajah staf tegang, waktu tunggu molor tak terkendali.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+          </div>
+          <h3>Standar Layanan Belang-Belang</h3>
+          <p>Kualitas pelayanan hanya baik saat diawasi Manajer. Saat shift berganti, standar merosot drastis.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="12" x="3" y="6" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><line x1="12" x2="12" y1="10" y2="14"/></svg>
+          </div>
+          <h3>Kurang Inisiatif Melayani</h3>
+          <p>Staf bekerja pasif menunggu instruksi, tidak peka terhadap tamu yang membutuhkan bantuan.</p>
+        </div>
+
+      </div>
+
+      <div class="pain__callout">
+        ⚠️ Jangan biarkan potensi pendapatan bisnis Anda menguap hanya karena tiadanya standar pelayanan.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT US ═══ -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+
+      <div class="about__photo">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="GloHC Training Session" />
+        <div class="about__photo-overlay"></div>
+        <div class="about__photo-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          Praktisi Berpengalaman
+        </div>
+      </div>
+
+      <div class="about__copy">
+
+        <span class="pill pill--blue">Tentang GloHC</span>
+
+        <h2>Dari Komunitas Praktisi, Tumbuh Menjadi Institusi Pengembang Standar Layanan Nasional.</h2>
+
+        <p><strong>Global Hospitality Coach (GloHC)</strong> berawal dari wadah berkumpulnya para praktisi, manajer, dan mentor perhotelan yang berdedikasi dengan satu misi bersama: <strong>mengangkat harkat dan standar kualitas pelayanan industri jasa di Indonesia.</strong></p>
+
+        <p>Kini bertransformasi menjadi lembaga pelatihan profesional, GloHC hadir untuk menepis jurang pemisah antara teori akademis di atas kertas dengan dinamika riil di lantai kerja. Kami tidak sekadar mengajarkan SOP; kami menanamkan <em>"hospitality mindset"</em>.</p>
+
+        <blockquote class="about__quote">
+          "Kami membentuk ulang cara staf berpikir, bersikap, dan bertutur kata—memastikan setiap tamu yang melangkah masuk merasa diperlakukan layaknya tamu VVIP."
+        </blockquote>
+
+        <div class="value-grid">
+          <div class="value-item">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h4>100% Praktis &amp; Aplikatif</h4>
+              <p>Studi kasus riil, langsung bisa dieksekusi esok hari.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Kurikulum Fleksibel</h4>
+              <p>Tailor-made untuk kafe rintisan hingga rantai hotel.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Didukung Komunitas</h4>
+              <p>Akses jejaring ekosistem praktisi se-Indonesia.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div>
+              <h4>Result-Oriented</h4>
+              <p>Mendorong rating positif, retensi, dan omzet.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ METHODOLOGY 4 STEPS ═══ -->
+  <section class="method" id="framework">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="pill pill--blue">Metodologi Pelatihan</span>
+        <h2>Alur Sederhana Menuju Pelayanan Bintang Lima</h2>
+        <p>Pendekatan sistematis 4 langkah GloHC untuk transformasi perilaku staf yang terarah, terukur, dan permanen.</p>
+      </div>
+
+      <div class="step-grid">
+
+        <div class="step-card">
+          <div class="step-num step-num--default">01</div>
+          <h3>Diagnosa &amp; Mindset</h3>
+          <p>Mengidentifikasi titik sumbatan operasional dan menanamkan fondasi empati hospitality.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num step-num--default">02</div>
+          <h3>Kalibrasi Standar</h3>
+          <p>Penyelarasan etika grooming, intonasi suara, ekspresi mikro, dan bahasa tubuh profesional.</p>
+        </div>
+
+        <div class="step-card step-card--active">
+          <div class="step-num step-num--active">03</div>
+          <h3>Simulasi &amp; Roleplay</h3>
+          <p>70% latihan menghadapi tamu sulit, stres rush hour, hingga seni upselling yang elegan.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num step-num--default">04</div>
+          <h3>Eksekusi &amp; Konsistensi</h3>
+          <p>Penerapan toolkit briefing harian 10 menit agar standar terjaga setiap shift.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED PROGRAM ═══ -->
+  <section class="program" id="program">
+    <div class="container">
+      <div class="program__banner">
+        <div class="program__grid">
+
+          <!-- Left: info -->
+          <div class="program__info">
+
+            <div class="pill pill--glow">
+              <span class="pill__dot pill__dot--pulse" style="background:#fbbf24;"></span>
+              COMING SOON — LIMITED SEATS PRIORITY WAITLIST
+            </div>
+
+            <h2>Service Excellence: 1-Day Intensive Workshop</h2>
+
+            <p>Workshop intensif satu hari penuh yang dirancang khusus untuk membentuk staf garda depan menjadi pelayan yang tangkas, elegan, dan profesional.</p>
+
+            <div class="program__meta">
+              <div class="program__meta-item">
+                <span class="program__meta-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                Durasi: 1 Hari Penuh (09:00 – 17:30)
+              </div>
+              <div class="program__meta-item">
+                <span class="program__meta-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                </span>
+                Metode: 30% Teori Aplikatif + 70% Simulasi &amp; Roleplay
+              </div>
+              <div class="program__meta-item">
+                <span class="program__meta-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                Lokasi: Segera Diumumkan (Prioritas bagi Waitlist)
+              </div>
+            </div>
+
+            <div>
+              <a href="#waitlist" class="btn btn--white">
+                Kunci Tempat di Waitlist
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: syllabus card -->
+          <div class="syllabus">
+            <h3 class="syllabus__title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Materi yang Akan Dipelajari:
+            </h3>
+
+            <div class="syllabus__list">
+              <div class="syllabus__item">
+                <span class="syllabus__num">1</span>
+                <div>
+                  <h4>The Art of Hospitality Mindset</h4>
+                  <p>Memahami psikologi tamu dan membangun empati dalam melayani.</p>
+                </div>
+              </div>
+              <div class="syllabus__item">
+                <span class="syllabus__num">2</span>
+                <div>
+                  <h4>First Impression &amp; Grooming Standards</h4>
+                  <p>Penampilan, bahasa tubuh, dan komunikasi verbal yang memikat.</p>
+                </div>
+              </div>
+              <div class="syllabus__item">
+                <span class="syllabus__num">3</span>
+                <div>
+                  <h4>Table &amp; Counter Service Mastery</h4>
+                  <p>Teknik servis efisien, flow kerja, dan subtle upselling.</p>
+                </div>
+              </div>
+              <div class="syllabus__item">
+                <span class="syllabus__num">4</span>
+                <div>
+                  <h4>Handling Complaints with Grace</h4>
+                  <p>Seni meredam emosi tamu dan mengubah mereka menjadi pelanggan setia.</p>
+                </div>
+              </div>
+              <div class="syllabus__item">
+                <span class="syllabus__num">5</span>
+                <div>
+                  <h4>Effective Team Briefing &amp; Synergy</h4>
+                  <p>Komunikasi tim sebelum dan selama jam operasional.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="syllabus__footer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Termasuk: Checklist Grooming, Panduan SOP, &amp; Sertifikat.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TARGET AUDIENCE ═══ -->
+  <section class="audience" id="target">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="pill pill--blue">Siapa yang Harus Ikut?</span>
+        <h2>Dirancang untuk Setiap Garda Depan Industri Jasa</h2>
+        <p>Ideal untuk staf operasional, supervisor, hingga manajer yang ingin meng-upgrade standar layanan.</p>
+      </div>
+
+      <div class="audience-grid">
+
+        <div class="audience-card">
+          <div class="audience-card__img">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Café" />
+            <span class="audience-card__tag">F&amp;B Specialist</span>
+          </div>
+          <div class="audience-card__body">
+            <h3>Kafe &amp; Kedai Kopi</h3>
+            <p>Barista, kasir, server, serta store manager yang ingin menghadirkan keramahan personal.</p>
+            <span class="audience-card__link">
+              Kurikulum Sesuai
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__img">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant" />
+            <span class="audience-card__tag">Dining Excellence</span>
+          </div>
+          <div class="audience-card__body">
+            <h3>Restoran &amp; Rumah Makan</h3>
+            <p>Pramusaji, floor captain, greeter, dan staf operasional jam sibuk.</p>
+            <span class="audience-card__link">
+              Kurikulum Sesuai
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__img">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Hotel" />
+            <span class="audience-card__tag">Hospitality</span>
+          </div>
+          <div class="audience-card__body">
+            <h3>Hotel &amp; Penginapan</h3>
+            <p>Front office, resepsionis, concierge, housekeeping, dan guest relations.</p>
+            <span class="audience-card__link">
+              Kurikulum Sesuai
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__img">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Clinic & Retail" />
+            <span class="audience-card__tag">All Service Industries</span>
+          </div>
+          <div class="audience-card__body">
+            <h3>Klinik &amp; Retail</h3>
+            <p>Front-liner klinik estetika, customer service butik, staf spa, dan bisnis relasi pelanggan.</p>
+            <span class="audience-card__link">
+              Kurikulum Sesuai
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ COACH BANNER ═══ -->
+  <section class="coach" id="coaches">
+    <div class="container">
+      <div class="coach__banner">
+        <div class="coach__grid">
+
+          <div class="coach__photo">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Master Coach GloHC" />
+          </div>
+
+          <div class="coach__copy">
+            <span class="pill pill--glow">Praktisi Langsung, Bukan Teori Semata</span>
+            <h3>Dipandu oleh Praktisi yang Puluhan Tahun Bergelut di Lantai Operasional.</h3>
+            <p>Setiap pelatih GloHC telah mengantongi ribuan jam terbang menghadapi tamu VVIP, menangani situasi krisis restoran, serta mendesain standar pelayanan untuk properti bintang lima.</p>
+
+            <div class="coach__stats">
+              <div class="coach__stat">
+                <strong>15+ Thn</strong>
+                <span>Pengalaman Industri</span>
+              </div>
+              <div class="coach__stat">
+                <strong>500+</strong>
+                <span>Staf Terlatih</span>
+              </div>
+              <div class="coach__stat">
+                <strong>100%</strong>
+                <span>Kasus Nyata</span>
+              </div>
+              <div class="coach__stat">
+                <strong>4.9 / 5</strong>
+                <span>Kepuasan</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq" id="faq">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="pill pill--blue">Tanya Jawab</span>
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+      </div>
+
+      <div class="faq__list">
+
+        <div class="faq__item open">
+          <div class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apakah pelatihan ini cocok untuk kedai kopi mandiri?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq__a">
+            Sangat cocok. Justru kedai kopi mandiri dan restoran independen membutuhkan keunggulan pelayanan yang hangat dan berkarakter agar mampu merebut hati pelanggan dari serbuan jaringan besar.
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apakah staf saya hanya akan mendengarkan ceramah seharian?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq__a">
+            Sama sekali tidak. Rasio kami adalah 30% teori pembuka dan 70% simulasi kasus nyata, roleplay, dan pembiasaan fisik. Setiap peserta akan dipraktikkan langsung.
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+            <span>Kapan tanggal dan di mana lokasi workshop diadakan?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq__a">
+            Jadwal dan lokasi eksklusif akan diumumkan pertama kali kepada pendaftar di Waitlist. Mereka mendapatkan prioritas booking kursi sebelum dibuka untuk umum.
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__q" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apakah ada harga khusus untuk pendaftaran tim (Group Pass)?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq__a">
+            Ya! Kami menyediakan paket investasi khusus Group Booking (3+ peserta) serta opsi Corporate In-House Training jika Anda ingin pelatihan langsung di tempat usaha Anda.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ WAITLIST FORM ═══ -->
+  <section class="waitlist" id="waitlist">
+    <div class="container waitlist__inner">
+
+      <!-- Left: copy -->
+      <div class="waitlist__copy">
+
+        <span class="pill pill--blue">Investasi Pada Layanan</span>
+
+        <h2>Amankan Posisi Anda di Daftar Tunggu Prioritas.</h2>
+
+        <p>Jumlah kursi setiap batch dibatasi ketat agar setiap peserta mendapatkan kesempatan roleplay simulasi secara intensif bersama master coach.</p>
+
+        <div class="waitlist__checks">
+          <div class="waitlist__check">
+            <span class="waitlist__check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Akses prioritas booking sebelum dibuka ke publik
+          </div>
+          <div class="waitlist__check">
+            <span class="waitlist__check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Kunci potongan biaya Early Bird 35%
+          </div>
+          <div class="waitlist__check">
+            <span class="waitlist__check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Bonus Starter Kit: Checklist Grooming &amp; SOP Komplain
+          </div>
+          <div class="waitlist__check">
+            <span class="waitlist__check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Gratis konsultasi kebutuhan training via WhatsApp
+          </div>
+        </div>
+
+        <div class="waitlist__tip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span><strong>Diri Anda di masa depan akan berterima kasih:</strong> Satu perbaikan kecil pada keramahan staf dapat menggandakan loyalitas tamu seumur hidup.</span>
+        </div>
+
+      </div>
+
+      <!-- Right: form card -->
+      <div class="form-card">
+
+        <h3>Formulir Waitlist Eksklusif</h3>
+        <p>Daftar sekarang tanpa biaya. Kami akan menghubungi saat jadwal resmi diumumkan.</p>
+
+        <form id="waitlistForm">
+
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required placeholder="Contoh: Budi Pratama" />
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">Nomor WhatsApp Aktif</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Contoh: 081234567890" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="businessName">Nama Usaha / Brand</label>
+              <input type="text" id="businessName" name="businessName" placeholder="Kopi Senja / Hotel XYZ" />
+            </div>
+            <div class="form-group">
+              <label for="businessType">Tipe Bisnis</label>
+              <select id="businessType" name="businessType">
+                <option value="Kafe / Kedai Kopi">Kafe / Kedai Kopi</option>
+                <option value="Restoran / F&B">Restoran / F&amp;B</option>
+                <option value="Hotel & Penginapan">Hotel &amp; Penginapan</option>
+                <option value="Klinik / Retail / Jasa">Klinik / Retail / Jasa</option>
+                <option value="Individu / Pegawai">Individu / Pegawai</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="participantCount">Rencana Jumlah Peserta</label>
+            <select id="participantCount" name="participantCount">
+              <option value="1 Orang">1 Orang (Individu)</option>
+              <option value="2-4 Orang">2–4 Orang (Tim Operasional)</option>
+              <option value="5-10 Orang">5–10 Orang (Cabang/Outlet)</option>
+              <option value=">10 Orang">&gt;10 Orang (Corporate In-House)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            Kunci Kursi Waitlist Sekarang
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+
+          <p class="form-card__privacy">🔒 Data Anda aman. Tidak ada spam, hanya info resmi jadwal &amp; promo Batch 1.</p>
+
+        </form>
+
+        <!-- Success overlay -->
+        <div class="form-success" id="formSuccess">
+          <div class="form-success__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Selamat! Anda Telah Terdaftar</h4>
+          <p>Tim kami akan segera menghubungi nomor WhatsApp Anda dengan rincian jadwal dan kupon diskon Early Bird.</p>
+          <button class="btn btn--primary btn--sm" onclick="document.getElementById('formSuccess').classList.remove('visible')">Tutup</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">G</div>
+            <span class="footer__brand-name">GloHC</span>
+          </div>
+          <p><strong>Global Hospitality Coach</strong> — Mengembangkan talenta dan garda depan industri F&amp;B, hotel, dan jasa di Indonesia dengan standar pelayanan berkelas dunia.</p>
+          <div class="footer__location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Jakarta &amp; Surabaya, Indonesia
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <h5>Navigasi</h5>
+          <ul>
+            <li><a href="#about">Tentang GloHC</a></li>
+            <li><a href="#framework">Metodologi 4 Langkah</a></li>
+            <li><a href="#program">1-Day Workshop</a></li>
+            <li><a href="#target">Target Peserta</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contact">
+          <h5>Konsultasi Korporat</h5>
+          <p>Butuh in-house training khusus cabang Anda dengan kurikulum yang disesuaikan?</p>
+          <a href="https://wa.me/6281234567890?text=Halo%20GloHC" target="_blank" class="footer__wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Hubungi via WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Global Hospitality Coach (GloHC). Hak Cipta Dilindungi.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Syarat &amp; Ketentuan</a>
+          <a href="#">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script>
+    // Init Lucide
+    lucide.createIcons();
+
+    // Mobile menu
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.mobile-nav a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('mobileNav').classList.remove('open');
+      });
+    });
+
+    // Header scroll shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Waitlist form
+    document.getElementById('waitlistForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value,
+        whatsapp: document.getElementById('whatsapp').value,
+        businessName: document.getElementById('businessName').value,
+        businessType: document.getElementById('businessType').value,
+        participantCount: document.getElementById('participantCount').value,
+      };
+
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('formSuccess').classList.add('visible');
+          e.target.reset();
+        }
+      } catch (err) {
+        console.error('Waitlist error:', err);
+        alert('Terjadi kesalahan. Silakan coba lagi.');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
