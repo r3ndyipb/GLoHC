@@ -43,8 +43,8 @@
 
   /* Spacing */
   --section-py: 6rem;
-  --container-max: 1200px;
-  --container-px: 1.5rem;
+  --container-max: 100%;
+  --container-px: clamp(1.5rem, 4vw, 4.5rem);
 
   /* Typography */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -76,8 +76,9 @@ a { text-decoration: none; color: inherit; }
 button { border: none; cursor: pointer; font-family: inherit; }
 ul { list-style: none; }
 
-/* ── Container ─────────────────────────────── */
+/* ── Container (100% Full Width Resolusi) ───── */
 .container {
+  width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-px);
@@ -386,9 +387,10 @@ ul { list-style: none; }
 .hero {
   position: relative;
   min-height: calc(100vh - 72px);
+  height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, var(--slate-50) 0%, var(--blue-50) 100%);
@@ -424,14 +426,15 @@ ul { list-style: none; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: clamp(1.5rem, 3.5vw, 3.5rem);
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center; /* Teks dan visual selaras middle secara vertikal */
   width: 100%;
   max-width: 100%;
-  padding-left: clamp(1.5rem, 4.5vw, 5rem);
-  padding-right: clamp(1.5rem, 4.5vw, 5rem);
+  padding-left: var(--container-px);
+  padding-right: 0; /* Gambar rata kanan penuh sampai ke tepi layar */
   flex: 1;
+  height: 100%;
   min-height: calc(100vh - 72px);
 }
 
@@ -521,15 +524,15 @@ ul { list-style: none; }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
 .hero__proof-text { font-size: 0.6875rem; color: var(--slate-400); line-height: 1.4; }
 
-/* Right: image composition (Grounded bottom, 90% Height) */
+/* Right: image composition (Di sebelah kanan, full tinggi di hero) */
 .hero__visual {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Di sebelah kanan */
   align-items: flex-end;
   width: 100%;
   height: 100%;
-  align-self: end; /* Grounded di bawah sedangkan teks kiri di middle */
+  align-self: stretch;
 }
 
 .hero__img-wrapper {
@@ -537,18 +540,17 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Rata kanan */
   align-items: flex-end;
 }
 
-/* Blue circle decoration behind the person (Proporsional dengan gambar diperbesar 50%) */
+/* Blue circle decoration behind the person */
 .hero__circle {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(800px, 92vh);
-  height: min(800px, 92vh);
+  right: clamp(1rem, 6vw, 7rem);
+  width: min(720px, 86vh);
+  height: min(720px, 86vh);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.07) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
@@ -563,24 +565,23 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(630px, 74vh);
-  height: min(630px, 74vh);
+  width: min(560px, 68vh);
+  height: min(560px, 68vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image (Perbesar +50%, Grounded & Commandingly Large) */
+/* Hero image: pro-person.png (Full tinggi di hero & di sebelah kanan) */
 .hero__img-wrapper img {
-  width: 145%;
-  min-width: 760px;
-  max-width: 1050px;
-  height: auto;
-  max-height: 94vh;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 72px);
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
-  object-position: bottom center;
+  object-position: bottom right;
 }
 
 /* Floating cards */
@@ -601,12 +602,12 @@ ul { list-style: none; }
 }
 .float-card--top {
   top: 18%;
-  right: 0px;
+  right: clamp(1.5rem, 6vw, 7rem);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 12%;
-  left: 0px;
+  bottom: 14%;
+  left: clamp(-1rem, 1vw, 3rem);
   animation: float-down 4.5s ease-in-out infinite;
 }
 
@@ -2046,14 +2047,26 @@ ul { list-style: none; }
   .hero__sub { max-width: 520px; margin: 0 auto; }
   .hero__actions { justify-content: center; }
   .hero__proof { justify-content: center; }
+  .hero__visual,
+  .hero__img-wrapper {
+    justify-content: center;
+    height: auto;
+  }
   .hero__img-wrapper img {
     width: auto;
     min-width: auto;
     max-width: 100%;
     height: auto;
     max-height: 480px;
+    object-position: bottom center;
   }
-  .hero__circle { width: 400px; height: 400px; }
+  .hero__circle {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+  }
   .hero__circle::after { width: 310px; height: 310px; }
   .float-card--top { right: 5%; }
   .float-card--bottom { left: 5%; }
