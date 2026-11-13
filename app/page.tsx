@@ -92,13 +92,11 @@ export default function HomePage() {
         {/* Visual Anchored to Far Right Corner */}
         <div className="hero__visual">
           <div className="hero__img-wrapper">
-            <Image
+            <img
               src="/images/pro-person-blank.png"
               alt="GloHC Professional Master Coach"
-              width={540}
-              height={700}
-              priority
-              style={{ objectFit: 'contain', width: 'auto', height: '100%' }}
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </div>
