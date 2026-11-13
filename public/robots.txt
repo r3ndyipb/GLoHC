@@ -9,3 +9,4 @@ Disallow: /api/
 
 # Sitemap Location
 Sitemap: https://glohc.id/sitemap.xml
+
