@@ -222,9 +222,9 @@ ul { list-style: none; }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
 .logo__img {
-  height: 2.75rem;
+  height: 2.85rem;
   width: auto;
   max-width: 3.5rem;
   object-fit: contain;
@@ -243,33 +243,36 @@ ul { list-style: none; }
 .logo__text {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 2.75rem; /* Tinggi sama persis dengan logo__img */
-  padding: 1px 0;
+  justify-content: center;
+  height: 2.85rem; /* Seimbang dengan tinggi logo__img */
+  padding: 0;
   width: fit-content;
+  gap: 0;
 }
 .logo__name {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 1.25rem; /* Perbesar ~10% agar tinggi seimbang dengan logo */
-  font-weight: 800;
+  align-items: baseline;
+  font-size: 2.05rem; /* Besar, tegas, sejajar lebar dengan teks samping & bawah */
+  font-weight: 850;
   color: var(--slate-900);
-  line-height: 1.1;
-  letter-spacing: normal;
+  line-height: 0.95;
+  letter-spacing: -0.025em; /* Solid tanpa ruang kosong */
+  margin: 0;
+  padding: 0;
 }
 .logo__name span {
   display: inline-block;
 }
 .logo__sub {
-  font-size: 0.585rem; /* Perbesar ~10% agar pas sejajar bawah */
+  font-size: 0.585rem;
   font-weight: 700;
   color: var(--slate-400);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  line-height: 1.1;
+  line-height: 1;
   display: block;
+  margin-top: 2px; /* Rapat dengan teks di atasnya */
 }
 
 /* Desktop Nav */
