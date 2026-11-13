@@ -252,11 +252,12 @@ ul { list-style: none; }
 .logo__name {
   display: flex;
   align-items: baseline;
-  font-size: 2.05rem; /* Besar, tegas, sejajar lebar dengan teks samping & bawah */
+  justify-content: space-between; /* Lebar GloHC sama persis dengan teks di bawahnya */
+  width: 100%;
+  font-size: 2.15rem;
   font-weight: 850;
   color: var(--slate-900);
   line-height: 0.95;
-  letter-spacing: -0.025em; /* Solid tanpa ruang kosong */
   margin: 0;
   padding: 0;
 }
@@ -264,15 +265,15 @@ ul { list-style: none; }
   display: inline-block;
 }
 .logo__sub {
-  font-size: 0.585rem;
+  font-size: 0.59rem;
   font-weight: 700;
   color: var(--slate-400);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.035em;
   white-space: nowrap;
   line-height: 1;
   display: block;
-  margin-top: 2px; /* Rapat dengan teks di atasnya */
+  margin-top: 2px;
 }
 
 /* Desktop Nav */
@@ -698,7 +699,7 @@ ul { list-style: none; }
   z-index: 2;
   object-fit: contain;
   object-position: top right;
-  transform: translateX(9.5%); /* Batas kanan adalah persis tepi terluar wanita di kanan */
+  transform: translateX(0); /* Digeser ke kiri agar batas kanan persis belah kanan gambar wanita */
 }
 
 /* Floating cards */
