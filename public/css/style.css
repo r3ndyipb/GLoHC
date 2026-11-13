@@ -748,18 +748,18 @@ ul { list-style: none; }
   padding-right: 0;
 }
 
-/* Blue circle decoration behind the person */
+/* Hero background circle (Ambient Halo for Hero Section) */
 .hero__circle {
   position: absolute;
   top: 50%;
-  right: -2rem;
-  transform: translateY(-44%);
-  width: min(850px, 110vh);
-  height: min(850px, 110vh);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(840px, 92vh);
+  height: min(840px, 92vh);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.05) 55%, transparent 75%);
-  border: 1.5px solid rgba(12, 135, 235, 0.18);
-  box-shadow: 0 0 80px rgba(12, 135, 235, 0.1);
+  background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.05) 50%, transparent 72%);
+  border: 1.5px solid rgba(12, 135, 235, 0.16);
+  box-shadow: 0 0 100px rgba(12, 135, 235, 0.08);
   z-index: 1;
   pointer-events: none;
 }
@@ -770,10 +770,10 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(680px, 88vh);
-  height: min(680px, 88vh);
+  width: min(680px, 75vh);
+  height: min(680px, 75vh);
   border-radius: 50%;
-  border: 1.5px dashed rgba(12, 135, 235, 0.2);
+  border: 1.5px dashed rgba(12, 135, 235, 0.18);
 }
 
 /* Hero image: pro-person.png (Perbesar 50%, Batas Kanan Wanita, Bawah Crop) */
@@ -820,8 +820,10 @@ ul { list-style: none; }
     inset 0 1px 2px #ffffff;
 }
 .float-card--top {
-  top: 8%;
-  right: clamp(15px, 2.5vw, 45px);
+  top: 14%;
+  right: var(--container-px);
+  z-index: 10;
+  pointer-events: auto;
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
