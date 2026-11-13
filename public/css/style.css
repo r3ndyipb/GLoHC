@@ -550,7 +550,7 @@ ul { list-style: none; }
   align-items: flex-start;
   justify-content: center;
   gap: 1.15rem;
-  max-width: 530px; /* Lebar terukur agar teks tidak melebar ke kanan */
+  max-width: 480px; /* Lebar terukur agar teks tidak menumpuk dengan orang */
   width: 100%;
   position: relative;
   z-index: 4;
@@ -561,7 +561,7 @@ ul { list-style: none; }
 }
 
 .hero__headline {
-  font-size: clamp(2.2rem, 3.1vw, 3.15rem);
+  font-size: clamp(2.1rem, 2.8vw, 2.9rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.16;
@@ -584,10 +584,10 @@ ul { list-style: none; }
 }
 
 .hero__sub {
-  font-size: 1.025rem;
+  font-size: 1rem;
   color: var(--slate-500);
   line-height: 1.6;
-  max-width: 480px;
+  max-width: 460px;
 }
 .hero__sub strong { color: var(--slate-700); font-weight: 600; }
 
@@ -631,21 +631,21 @@ ul { list-style: none; }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
 .hero__proof-text { font-size: 0.6875rem; color: var(--slate-500); line-height: 1.4; margin-top: 2px; }
 
-/* Right: image composition (Anchored ke POJOK KANAN hero agar tidak menumpuk dengan teks) */
+/* Right: image composition (Perbesar 50%, Batas Kanan Wanita, Bawah Tercrop) */
 .hero__visual {
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  width: 52%;
-  max-width: 760px;
+  width: 58%;
+  max-width: 1100px;
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   pointer-events: none;
   z-index: 2;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero__img-wrapper {
@@ -653,8 +653,9 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end; /* Rata kanan murni / pojok kanan */
-  align-items: flex-end; /* Nempel bawah murni */
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: clamp(12px, 2.5vh, 32px);
   padding-right: 0;
 }
 
@@ -663,9 +664,9 @@ ul { list-style: none; }
   position: absolute;
   top: 50%;
   right: -2rem;
-  transform: translateY(-50%);
-  width: min(720px, 90vh);
-  height: min(720px, 90vh);
+  transform: translateY(-44%);
+  width: min(850px, 110vh);
+  height: min(850px, 110vh);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.05) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
@@ -680,24 +681,24 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(560px, 72vh);
-  height: min(560px, 72vh);
+  width: min(680px, 88vh);
+  height: min(680px, 88vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image: pro-person.png (Pojok Kanan, Fit Height ~96%, Bottom 0, Bebas Tumpukan) */
+/* Hero image: pro-person.png (Perbesar 50%, Batas Kanan Wanita, Bawah Crop) */
 .hero__img-wrapper img {
   width: auto;
   max-width: none;
-  height: 96%; /* Fit height proporsional */
-  max-height: calc(100vh - 76px);
+  height: calc((100vh - 72px) * 1.48); /* Perbesar 50% (~148% viewport hero) */
+  max-height: none;
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
-  object-position: bottom right;
-  margin-right: -40px; /* Kompensasi transparent padding PNG asli agar benar-benar menempel pojok kanan */
+  object-position: top right;
+  transform: translateX(9.5%); /* Batas kanan adalah persis tepi terluar wanita di kanan */
 }
 
 /* Floating cards */
@@ -718,13 +719,13 @@ ul { list-style: none; }
   backface-visibility: hidden;
 }
 .float-card--top {
-  top: 16%;
-  right: clamp(10px, 2vw, 30px);
+  top: 12%;
+  right: clamp(15px, 2.5vw, 45px);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 12%;
-  left: clamp(-10px, 2vw, 40px);
+  bottom: 14%;
+  left: clamp(10px, 2%, 40px);
   animation: float-down 4.5s ease-in-out infinite;
 }
 
