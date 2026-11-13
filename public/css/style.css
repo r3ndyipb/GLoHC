@@ -398,7 +398,8 @@ ul { list-style: none; }
   height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, var(--slate-50) 0%, var(--blue-50) 100%);
@@ -434,26 +435,25 @@ ul { list-style: none; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1.1fr 1fr;
   gap: clamp(1.5rem, 3vw, 3rem);
-  align-items: center; /* Teks dan visual selaras middle secara vertikal */
+  align-items: center; /* Teks dan visual selaras middle murni secara vertikal */
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-px);
-  flex: 1;
   height: 100%;
-  min-height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
 }
 
-/* Left: copy - Posisi Middle Vertikal (Bukan di Bawah) */
+/* Left: copy - Posisi Murni Middle Vertikal (Tidak Ikutan Turun) */
 .hero__copy {
-  padding: 2rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  align-self: center; /* Posisi middle vertikal */
+  align-self: center; /* Posisi tengah vertikal sempurna */
   gap: 1.25rem;
   max-width: 580px;
   position: relative;
@@ -534,19 +534,18 @@ ul { list-style: none; }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
 .hero__proof-text { font-size: 0.6875rem; color: var(--slate-400); line-height: 1.4; }
 
-/* Right: image composition (Di sebelah kanan, perbesar 50%, turun 10%, crop bawah) */
+/* Right: image composition (Gambar berdiri kokoh tanpa mendorong grid copy) */
 .hero__visual {
   position: relative;
-  display: flex;
-  justify-content: flex-end; /* Di sebelah kanan */
-  align-items: flex-start;
   width: 100%;
   height: 100%;
+  min-height: 0;
   align-self: stretch;
 }
 
 .hero__img-wrapper {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -558,10 +557,10 @@ ul { list-style: none; }
 .hero__circle {
   position: absolute;
   top: 50%;
-  right: clamp(1rem, 6vw, 8rem);
+  right: clamp(0rem, 3vw, 4rem);
   transform: translateY(-44%);
-  width: min(850px, 105vh);
-  height: min(850px, 105vh);
+  width: min(800px, 95vh);
+  height: min(800px, 95vh);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.07) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
@@ -576,24 +575,24 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(660px, 82vh);
-  height: min(660px, 82vh);
+  width: min(620px, 75vh);
+  height: min(620px, 75vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image: pro-person.png (+50% Lebih Besar, Diturunkan ~10% dari atas, Terpotong ke bawah) */
+/* Hero image: pro-person.png (+40-50% Lebih Besar, Diturunkan ~8% dari atas, Terpotong rapi ke bawah) */
 .hero__img-wrapper img {
   width: auto;
   max-width: none;
-  height: calc((100vh - 72px) * 1.45); /* Perbesar ~50% */
+  height: calc((100vh - 72px) * 1.35); /* Proporsi megah */
   max-height: none;
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
   object-position: top right;
-  transform: translateY(8%); /* Turunkan ~8-10% agar tidak menempel di navbar atas */
+  transform: translateY(8%); /* Berjarak nyaman dari header atas */
 }
 
 /* Floating cards */
@@ -2061,6 +2060,8 @@ ul { list-style: none; }
   .hero__proof { justify-content: center; }
   .hero__visual,
   .hero__img-wrapper {
+    position: relative;
+    inset: auto;
     justify-content: center;
     height: auto;
   }
