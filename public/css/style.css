@@ -448,6 +448,8 @@ ul { list-style: none; }
   align-self: center; /* Posisi middle vertikal */
   gap: 1.25rem;
   max-width: 580px;
+  position: relative;
+  z-index: 3;
 }
 .hero__copy .pill {
   align-self: flex-start;
@@ -524,12 +526,12 @@ ul { list-style: none; }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
 .hero__proof-text { font-size: 0.6875rem; color: var(--slate-400); line-height: 1.4; }
 
-/* Right: image composition (Di sebelah kanan, full tinggi di hero) */
+/* Right: image composition (Di sebelah kanan, perbesar 50%, turun 10%, crop bawah) */
 .hero__visual {
   position: relative;
   display: flex;
   justify-content: flex-end; /* Di sebelah kanan */
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   align-self: stretch;
@@ -541,20 +543,21 @@ ul { list-style: none; }
   height: 100%;
   display: flex;
   justify-content: flex-end; /* Rata kanan */
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 /* Blue circle decoration behind the person */
 .hero__circle {
   position: absolute;
-  bottom: 0;
-  right: clamp(1rem, 6vw, 7rem);
-  width: min(720px, 86vh);
-  height: min(720px, 86vh);
+  top: 50%;
+  right: clamp(1rem, 6vw, 8rem);
+  transform: translateY(-44%);
+  width: min(850px, 105vh);
+  height: min(850px, 105vh);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.07) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
-  box-shadow: 0 0 70px rgba(12, 135, 235, 0.1);
+  box-shadow: 0 0 80px rgba(12, 135, 235, 0.1);
   z-index: 1;
   pointer-events: none;
 }
@@ -565,23 +568,24 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(560px, 68vh);
-  height: min(560px, 68vh);
+  width: min(660px, 82vh);
+  height: min(660px, 82vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image: pro-person.png (Full tinggi di hero & di sebelah kanan) */
+/* Hero image: pro-person.png (+50% Lebih Besar, Diturunkan ~10% dari atas, Terpotong ke bawah) */
 .hero__img-wrapper img {
   width: auto;
-  max-width: 100%;
-  height: 100%;
-  max-height: calc(100vh - 72px);
+  max-width: none;
+  height: calc((100vh - 72px) * 1.45); /* Perbesar ~50% */
+  max-height: none;
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
-  object-position: bottom right;
+  object-position: top right;
+  transform: translateY(8%); /* Turunkan ~8-10% agar tidak menempel di navbar atas */
 }
 
 /* Floating cards */
@@ -601,13 +605,13 @@ ul { list-style: none; }
   backface-visibility: hidden;
 }
 .float-card--top {
-  top: 18%;
-  right: clamp(1.5rem, 6vw, 7rem);
+  top: 22%;
+  right: clamp(1.5rem, 8vw, 9rem);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 14%;
-  left: clamp(-1rem, 1vw, 3rem);
+  bottom: 12%;
+  left: clamp(-1rem, 2vw, 4rem);
   animation: float-down 4.5s ease-in-out infinite;
 }
 
@@ -2059,6 +2063,7 @@ ul { list-style: none; }
     height: auto;
     max-height: 480px;
     object-position: bottom center;
+    transform: none;
   }
   .hero__circle {
     left: 50%;
