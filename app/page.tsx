@@ -53,7 +53,7 @@ export default function HomePage() {
             </h1>
 
             <p className="hero__sub">
-              Pelatihan operasional intensif bersama praktisi veteran bintang lima untuk mentransformasi staf hotel, restoran, salon wellness, dan klinik estetika menjadi garda depan beretika prima dengan reputasi layanan kelas dunia.
+              Transformasi standar pelayanan bintang lima bersama para praktisi senior industri—membina talenta garda depan perhotelan, restoran, salon wellness, dan klinik estetika menjadi duta layanan yang autentik, elegan, dan berkelas dunia.
             </p>
 
             <div className="hero__actions">
