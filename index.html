@@ -1002,7 +1002,7 @@
 
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Nomor WhatsApp Aktif</label>
-                <input type="tel" id="whatsapp" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none text-sm transition-all" />
+                <input type="tel" id="whatsapp" required placeholder="Contoh: 0812-1326-9141" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none text-sm transition-all" />
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1110,9 +1110,9 @@
           <p class="text-xs text-slate-400">
             Membutuhkan in-house training khusus cabang Anda dengan kurikulum yang disesuaikan? Hubungi perwakilan kami:
           </p>
-          <a href="https://wa.me/6281234567890?text=Halo%20GloHC,%20saya%20ingin%20konsultasi%20mengenai%20corporate%20training%20hospitality" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold transition-all shadow-md">
+          <a href="https://wa.me/6281213269141?text=Halo%20GloHC,%20saya%20ingin%20konsultasi%20mengenai%20corporate%20training%20hospitality" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold transition-all shadow-md">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Hubungi via WhatsApp Hotline</span>
+            <span>Hubungi via WhatsApp Hotline (+62 812-1326-9141)</span>
           </a>
         </div>
 
@@ -1152,9 +1152,15 @@
 
       console.log('Waitlist Registration:', { name, whatsapp, businessName, businessType, participantCount });
 
+      const msg = `Halo GloHC, saya ingin mendaftar Waitlist Eksklusif Batch 1:\n\n• Nama: ${name}\n• WhatsApp: ${whatsapp}\n• Bisnis: ${businessName || '-'}\n• Tipe: ${businessType}\n• Peserta: ${participantCount}\n\nMohon informasi jadwal & konfirmasi prioritas. Terima kasih!`;
+      const waUrl = `https://wa.me/6281213269141?text=${encodeURIComponent(msg)}`;
+
       // Show Success Modal
       document.getElementById('successOverlay').classList.remove('hidden');
       lucide.createIcons();
+
+      // Open WhatsApp
+      window.open(waUrl, '_blank');
     }
   </script>
 </body>
