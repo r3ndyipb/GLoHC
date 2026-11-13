@@ -1,0 +1,11 @@
+# Robots.txt for Global Hospitality Coach (GloHC)
+# https://glohc.id
+
+User-agent: *
+Allow: /
+
+# Disallow internal API endpoints
+Disallow: /api/
+
+# Sitemap Location
+Sitemap: https://glohc.id/sitemap.xml
