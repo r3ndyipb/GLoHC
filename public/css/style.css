@@ -131,7 +131,7 @@ ul { list-style: none; }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; }
 .logo__img {
   height: 2.75rem;
   width: auto;
@@ -152,23 +152,26 @@ ul { list-style: none; }
 .logo__text {
   display: inline-flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 2.75rem; /* Tinggi sama persis dengan logo__img */
+  padding: 1px 0;
   width: fit-content;
 }
 .logo__name {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.125rem;
+  font-size: 1.25rem; /* Perbesar ~10% agar tinggi seimbang dengan logo */
   font-weight: 800;
   color: var(--slate-900);
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: normal;
 }
 .logo__name span {
   display: inline-block;
 }
 .logo__sub {
-  font-size: 0.53125rem;
+  font-size: 0.585rem; /* Perbesar ~10% agar pas sejajar bawah */
   font-weight: 700;
   color: var(--slate-400);
   text-transform: uppercase;
@@ -430,13 +433,13 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-/* Centered Hero Inner Container - Bounded within --container-max */
+/* Centered Hero Inner Container - Bounded within --container-max (Kiri 60%, Kanan 40%) */
 .hero__inner {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: 60% 40%; /* Kiri 60% agar tulisan leluasa & tidak gepeng */
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
   align-items: center; /* Teks dan visual selaras middle murni secara vertikal */
   width: 100%;
   max-width: var(--container-max);
@@ -446,7 +449,7 @@ ul { list-style: none; }
   max-height: calc(100vh - 72px);
 }
 
-/* Left: copy - Posisi Murni Middle Vertikal (Tidak Ikutan Turun) */
+/* Left: copy - Posisi Murni Middle Vertikal (60% Width, Tidak Gepeng) */
 .hero__copy {
   padding: 0;
   display: flex;
@@ -455,7 +458,8 @@ ul { list-style: none; }
   justify-content: center;
   align-self: center; /* Posisi tengah vertikal sempurna */
   gap: 1.25rem;
-  max-width: 580px;
+  max-width: 680px; /* Leluasa agar tulisan tidak tertekan/gepeng */
+  width: 100%;
   position: relative;
   z-index: 3;
 }
@@ -465,10 +469,10 @@ ul { list-style: none; }
 }
 
 .hero__headline {
-  font-size: clamp(2.35rem, 3.4vw, 3.35rem);
+  font-size: clamp(2.35rem, 3.2vw, 3.35rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.12;
+  line-height: 1.15;
   color: var(--slate-900);
 }
 .hero__headline span {
@@ -491,7 +495,7 @@ ul { list-style: none; }
   font-size: 1.0625rem;
   color: var(--slate-500);
   line-height: 1.65;
-  max-width: 480px;
+  max-width: 600px;
 }
 .hero__sub strong { color: var(--slate-700); font-weight: 600; }
 
@@ -553,11 +557,11 @@ ul { list-style: none; }
   align-items: flex-start;
 }
 
-/* Blue circle decoration behind the person */
+/* Blue circle decoration behind the person (Ikut geser ke kanan) */
 .hero__circle {
   position: absolute;
   top: 50%;
-  right: clamp(0rem, 3vw, 4rem);
+  right: clamp(-3rem, 1vw, 2rem);
   transform: translateY(-44%);
   width: min(800px, 95vh);
   height: min(800px, 95vh);
@@ -581,7 +585,7 @@ ul { list-style: none; }
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image: pro-person.png (+40-50% Lebih Besar, Diturunkan ~8% dari atas, Terpotong rapi ke bawah) */
+/* Hero image: pro-person.png (Geser ke kanan 10%, berjarak nyaman dari header atas, crop bawah) */
 .hero__img-wrapper img {
   width: auto;
   max-width: none;
@@ -592,7 +596,7 @@ ul { list-style: none; }
   z-index: 2;
   object-fit: contain;
   object-position: top right;
-  transform: translateY(8%); /* Berjarak nyaman dari header atas */
+  transform: translate(10%, 8%); /* Geser ke kanan 10% & turun 8% dari atas */
 }
 
 /* Floating cards */
@@ -612,13 +616,13 @@ ul { list-style: none; }
   backface-visibility: hidden;
 }
 .float-card--top {
-  top: 22%;
-  right: clamp(1.5rem, 8vw, 9rem);
+  top: 20%;
+  right: clamp(0.5rem, 4vw, 4rem);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 12%;
-  left: clamp(-1rem, 2vw, 4rem);
+  bottom: 15%;
+  left: clamp(-1rem, 1vw, 2rem);
   animation: float-down 4.5s ease-in-out infinite;
 }
 
