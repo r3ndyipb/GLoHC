@@ -1,15 +1,22 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import SectionDivider from '@/components/SectionDivider';
-import FAQAccordion from '@/components/FAQAccordion';
+import FAQAccordion, { FAQItemData } from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
-  title: 'Pertanyaan yang Sering Diajukan (FAQ)',
-  description: 'Informasi lengkap seputar metode 70% simulasi roleplay GloHC, kurikulum, jadwal batch, sertifikasi kelulusan, dan opsi in-house training hotel, resto, salon & klinik estetika.',
+  title: 'FAQ & Tanya Jawab Pelatihan Hospitality | GloHC Indonesia',
+  description:
+    'Pertanyaan umum seputar pelatihan Service Excellence GloHC: metode 70% simulasi, sertifikasi kompetensi resmi, in-house training cabang, biaya, dan jadwal batch.',
+  openGraph: {
+    title: 'FAQ & Tanya Jawab Pelatihan Service Excellence | GloHC',
+    description:
+      'Jawaban lengkap seputar kurikulum, metode 70% simulasi roleplay, sertifikasi kompetensi resmi, hingga opsi in-house training di outlet Anda.',
+    url: 'https://glohc.id/faq',
+  },
 };
 
-const fullFAQList = [
+const allFaqs: FAQItemData[] = [
   {
     q: 'Siapa saja yang paling cocok mengikuti pelatihan GloHC?',
     a: 'Program kami dirancang khusus untuk staf garis depan (resepsionis hotel, concierge, guest relations, floor captain & server resto, beauty consultant, terapis salon & spa, hingga customer service klinik estetika) serta level supervisor dan operational manager di industri perhotelan, restoran & dining, salon wellness, dan klinik estetika yang ingin menstandarisasi mutu keramahan timnya.',
@@ -53,17 +60,15 @@ export default function FAQPage() {
         </div>
       </div>
 
-      {/* Section Divider */}
       <SectionDivider />
 
-      {/* ═══ FAQ SECTION ═══ */}
+      {/* ═══ FAQ ACCORDION SECTION ═══ */}
       <section className="faq" style={{ padding: 'var(--section-py) 0', background: '#fff' }}>
         <div className="container">
-          <FAQAccordion items={fullFAQList} defaultOpenIndex={0} />
+          <FAQAccordion items={allFaqs} defaultOpenIndex={0} />
         </div>
       </section>
 
-      {/* Section Divider */}
       <SectionDivider />
 
       {/* ═══ STILL HAVE QUESTIONS BANNER ═══ */}
