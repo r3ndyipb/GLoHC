@@ -484,16 +484,16 @@ ul { list-style: none; }
 }
 
 /* ════════════════════════════════════════════
-   HERO SECTION (Fit Height & Full Width 100%)
+   HERO SECTION (Fit Height, Pojok Kanan Visual, Clean Left Copy)
    ════════════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: calc(100vh - 72px);
   height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
+  min-height: 560px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, var(--slate-50) 0%, var(--blue-50) 100%);
@@ -524,35 +524,33 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-/* Centered Hero Inner Container - Bounded within --container-max (Kiri 60%, Kanan 40%) */
+/* Centered Hero Inner Container - Bounded within --container-max (Kiri) */
 .hero__inner {
   position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 60% 40%; /* Kiri 60% agar tulisan leluasa & tidak gepeng */
-  gap: clamp(1.5rem, 2.5vw, 2.5rem);
-  align-items: center; /* Teks dan visual selaras middle murni secara vertikal */
+  z-index: 3;
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-px);
   height: 100%;
-  max-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  pointer-events: none; /* Allow click-through to background if needed */
 }
 
-/* Left: copy - Posisi Murni Middle Vertikal (60% Width, Tidak Gepeng) */
+/* Left: copy - Posisi Murni Middle Vertikal, Bersih & Tidak Terlalu Rame */
 .hero__copy {
+  pointer-events: auto; /* Active clickable */
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  align-self: center; /* Posisi tengah vertikal sempurna */
-  gap: 1.25rem;
-  max-width: 680px; /* Leluasa agar tulisan tidak tertekan/gepeng */
+  gap: 1.15rem;
+  max-width: 530px; /* Lebar terukur agar teks tidak melebar ke kanan */
   width: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 .hero__copy .pill {
   align-self: flex-start;
@@ -560,10 +558,10 @@ ul { list-style: none; }
 }
 
 .hero__headline {
-  font-size: clamp(2.35rem, 3.2vw, 3.35rem);
+  font-size: clamp(2.2rem, 3.1vw, 3.15rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 1.16;
   color: var(--slate-900);
 }
 .hero__headline span {
@@ -583,29 +581,30 @@ ul { list-style: none; }
 }
 
 .hero__sub {
-  font-size: 1.0625rem;
+  font-size: 1.025rem;
   color: var(--slate-500);
-  line-height: 1.65;
-  max-width: 600px;
+  line-height: 1.6;
+  max-width: 480px;
 }
 .hero__sub strong { color: var(--slate-700); font-weight: 600; }
 
 /* CTA row */
-.hero__actions { display: flex; gap: 0.875rem; flex-wrap: wrap; }
+.hero__actions { display: flex; gap: 0.875rem; flex-wrap: wrap; margin-top: 0.25rem; }
 
 /* Trust micro-proof */
 .hero__proof {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.875rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--slate-200);
+  margin-top: 0.25rem;
 }
 .hero__avatars {
   display: flex;
 }
 .hero__avatars img {
-  width: 2.25rem; height: 2.25rem;
+  width: 2.125rem; height: 2.125rem;
   border-radius: 50%;
   border: 2px solid #fff;
   object-fit: cover;
@@ -613,7 +612,7 @@ ul { list-style: none; }
 }
 .hero__avatars img:first-child { margin-left: 0; }
 .hero__avatars .more {
-  width: 2.25rem; height: 2.25rem;
+  width: 2.125rem; height: 2.125rem;
   border-radius: 50%;
   border: 2px solid #fff;
   background: var(--blue-100);
@@ -627,37 +626,45 @@ ul { list-style: none; }
 }
 .hero__stars { display: flex; gap: 1px; color: var(--amber-500); }
 .hero__stars svg { width: 0.875rem; height: 0.875rem; fill: var(--amber-500); }
-.hero__proof-text { font-size: 0.6875rem; color: var(--slate-400); line-height: 1.4; }
+.hero__proof-text { font-size: 0.6875rem; color: var(--slate-500); line-height: 1.4; margin-top: 2px; }
 
-/* Right: image composition (Gambar berdiri kokoh tanpa mendorong grid copy) */
+/* Right: image composition (Anchored ke POJOK KANAN hero agar tidak menumpuk dengan teks) */
 .hero__visual {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 52%;
+  max-width: 760px;
   height: 100%;
-  min-height: 0;
-  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .hero__img-wrapper {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end; /* Rata kanan */
-  align-items: flex-start;
+  justify-content: flex-end; /* Rata kanan murni / pojok kanan */
+  align-items: flex-end; /* Nempel bawah murni */
+  padding-right: 0;
 }
 
-/* Blue circle decoration behind the person (Ikut geser ke kanan) */
+/* Blue circle decoration behind the person */
 .hero__circle {
   position: absolute;
   top: 50%;
-  right: clamp(-3rem, 1vw, 2rem);
-  transform: translateY(-44%);
-  width: min(800px, 95vh);
-  height: min(800px, 95vh);
+  right: -2rem;
+  transform: translateY(-50%);
+  width: min(720px, 90vh);
+  height: min(720px, 90vh);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.07) 55%, transparent 75%);
+  background: radial-gradient(circle, rgba(12, 135, 235, 0.16) 0%, rgba(12, 135, 235, 0.05) 55%, transparent 75%);
   border: 1.5px solid rgba(12, 135, 235, 0.18);
   box-shadow: 0 0 80px rgba(12, 135, 235, 0.1);
   z-index: 1;
@@ -670,24 +677,24 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(620px, 75vh);
-  height: min(620px, 75vh);
+  width: min(560px, 72vh);
+  height: min(560px, 72vh);
   border-radius: 50%;
   border: 1.5px dashed rgba(12, 135, 235, 0.2);
 }
 
-/* Hero image: pro-person.png (Geser ke kanan 10%, berjarak nyaman dari header atas, crop bawah) */
+/* Hero image: pro-person.png (Pojok Kanan, Fit Height ~96%, Bottom 0, Bebas Tumpukan) */
 .hero__img-wrapper img {
   width: auto;
   max-width: none;
-  height: calc((100vh - 72px) * 1.35); /* Proporsi megah */
-  max-height: none;
+  height: 96%; /* Fit height proporsional */
+  max-height: calc(100vh - 76px);
   display: block;
   position: relative;
   z-index: 2;
   object-fit: contain;
-  object-position: top right;
-  transform: translate(10%, 8%); /* Geser ke kanan 10% & turun 8% dari atas */
+  object-position: bottom right;
+  margin-right: -40px; /* Kompensasi transparent padding PNG asli agar benar-benar menempel pojok kanan */
 }
 
 /* Floating cards */
@@ -695,25 +702,26 @@ ul { list-style: none; }
   position: absolute;
   background: #fff;
   border-radius: var(--radius-xl);
-  padding: 0.875rem 1rem;
+  padding: 0.75rem 0.95rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   border: 1px solid var(--blue-100);
   z-index: 5;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  pointer-events: auto;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
 .float-card--top {
-  top: 20%;
-  right: clamp(0.5rem, 4vw, 4rem);
+  top: 16%;
+  right: clamp(10px, 2vw, 30px);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 15%;
-  left: clamp(-1rem, 1vw, 2rem);
+  bottom: 12%;
+  left: clamp(-10px, 2vw, 40px);
   animation: float-down 4.5s ease-in-out infinite;
 }
 
@@ -2175,33 +2183,51 @@ ul { list-style: none; }
    ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .hero {
+    height: auto;
+    max-height: none;
     min-height: auto;
-    padding-top: 2rem;
+    padding-top: 3rem;
+    flex-direction: column;
   }
   .hero__headline { font-size: 2.35rem; }
   .hero__inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
+    height: auto;
+    pointer-events: auto;
+    justify-content: center;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    min-height: auto;
   }
   .hero__copy {
-    padding: 1rem 0 0;
+    padding: 0;
     align-items: center;
+    text-align: center;
     max-width: 620px;
     margin: 0 auto;
   }
+  .hero__copy .pill { align-self: center; }
   .hero__sub { max-width: 520px; margin: 0 auto; }
   .hero__actions { justify-content: center; }
   .hero__proof { justify-content: center; }
-  .hero__visual,
+  .hero__visual {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 2.5rem auto 0;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
   .hero__img-wrapper {
     position: relative;
     inset: auto;
     justify-content: center;
+    align-items: center;
     height: auto;
+    padding-right: 0;
   }
   .hero__img-wrapper img {
     width: auto;
@@ -2215,7 +2241,8 @@ ul { list-style: none; }
   .hero__circle {
     left: 50%;
     right: auto;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
   }
