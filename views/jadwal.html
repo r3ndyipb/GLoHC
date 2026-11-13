@@ -151,20 +151,16 @@
   <!-- ═══ PAGE HEADER ═══ -->
   <div class="page-header">
     <div class="container page-header__inner">
-      <span class="pill pill--blue">
-        <span class="pill__dot pill__dot--pulse"></span>
-        Kalender Pelatihan 2026 - 2027
-      </span>
       <h1>Jadwal Pelatihan yang Sedang Berjalan &amp; Mendatang</h1>
       <p>Pilih batch yang paling sesuai dengan ritme operasional outlet atau properti Anda. Kuota dibatasi maksimal 25 peserta per batch untuk menjaga kualitas simulasi.</p>
     </div>
   </div>
 
   <!-- Section Divider with Pip -->
-  <div class="section-divider section-divider--center-pip"></div>
+  <div class="section-divider section-divider--center-pip"><span class="crosshair crosshair--center">+</span></div>
 
   <!-- ═══ JADWAL SECTION ═══ -->
-  <section class="schedule" style="background: #fff; padding-top: 3.5rem;">
+  <section class="schedule" style="background: #fff; padding: var(--section-py) 0;">
     <div class="container">
 
       <div class="schedule-grid">
@@ -178,20 +174,22 @@
             </span>
             <span class="schedule-card__batch">Batch 01</span>
           </div>
-          <h3 class="schedule-card__title">Service Excellence Masterclass — Jakarta</h3>
-          <p class="schedule-card__desc">Fokus pada mentalitas hospitality DNA, teknik first impression 3 detik, dan roleplay penanganan keluhan tamu.</p>
-          <div class="schedule-card__details">
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              <span>15 – 16 November 2026 (09:00 - 17:00 WIB)</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Hotel Bintang 5, Senayan, Jakarta Selatan</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Kuota: 25 Peserta (<strong>Penuh / Full Booked</strong>)</span>
+          <div class="schedule-card__body">
+            <h3 class="schedule-card__title">Service Excellence Masterclass — Jakarta</h3>
+            <p class="schedule-card__desc">Fokus pada mentalitas hospitality DNA, teknik first impression 3 detik, dan roleplay penanganan keluhan tamu.</p>
+            <div class="schedule-card__details">
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <span>15 – 16 November 2026 (09:00 - 17:00 WIB)</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Hotel Bintang 5, Senayan, Jakarta Selatan</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Kuota: 25 Peserta (<strong>Penuh / Full Booked</strong>)</span>
+              </div>
             </div>
           </div>
           <div class="schedule-card__footer">
@@ -199,7 +197,7 @@
               <div class="schedule-progress__bar" style="width: 100%;"></div>
             </div>
             <span class="schedule-progress__text">Status: 25/25 Kursi Terisi</span>
-            <button class="btn btn--outline btn--sm" style="width: 100%; margin-top: 0.75rem; opacity: 0.6; cursor: not-allowed;" disabled>Pendaftaran Ditutup</button>
+            <button class="btn btn--outline btn--sm" style="width: 100%; margin-top: 0.25rem; opacity: 0.6; cursor: not-allowed;" disabled>Pendaftaran Ditutup</button>
           </div>
         </div>
 
@@ -212,20 +210,22 @@
             </span>
             <span class="schedule-card__batch">Batch 02</span>
           </div>
-          <h3 class="schedule-card__title">Service Excellence Masterclass — Surabaya</h3>
-          <p class="schedule-card__desc">Khusus staf restoran, kafe premium, dan klinik estetika yang ingin meningkatkan retensi pelanggan melalui service touchpoint.</p>
-          <div class="schedule-card__details">
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              <span>29 – 30 November 2026 (09:00 - 17:00 WIB)</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>JW Marriott Hotel, Surabaya Pusat</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Kuota: 25 Peserta (<strong>Sisa 6 Kursi</strong>)</span>
+          <div class="schedule-card__body">
+            <h3 class="schedule-card__title">Service Excellence Masterclass — Surabaya</h3>
+            <p class="schedule-card__desc">Khusus staf restoran, kafe premium, dan klinik estetika yang ingin meningkatkan retensi pelanggan melalui service touchpoint.</p>
+            <div class="schedule-card__details">
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <span>29 – 30 November 2026 (09:00 - 17:00 WIB)</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>JW Marriott Hotel, Surabaya Pusat</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Kuota: 25 Peserta (<strong>Sisa 6 Kursi</strong>)</span>
+              </div>
             </div>
           </div>
           <div class="schedule-card__footer">
@@ -233,7 +233,7 @@
               <div class="schedule-progress__bar" style="width: 76%;"></div>
             </div>
             <span class="schedule-progress__text">19 dari 25 kursi terisi (Sisa 6 kursi)</span>
-            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.75rem; text-align: center; justify-content: center;">Daftar Batch Surabaya</a>
+            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.25rem; text-align: center; justify-content: center;">Daftar Batch Surabaya</a>
           </div>
         </div>
 
@@ -246,20 +246,22 @@
             </span>
             <span class="schedule-card__batch">Batch 03</span>
           </div>
-          <h3 class="schedule-card__title">Hospitality Leadership &amp; Complaint Mastery — Bandung</h3>
-          <p class="schedule-card__desc">Dirancang bagi supervisor, manager operasional, dan business owner untuk menyusun SOP dan standar kontrol kualitas layanan.</p>
-          <div class="schedule-card__details">
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              <span>13 – 14 Desember 2026 (09:00 - 17:00 WIB)</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Pullman Grand Central, Bandung</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Kuota: 25 Peserta (<strong>Sisa 14 Kursi</strong>)</span>
+          <div class="schedule-card__body">
+            <h3 class="schedule-card__title">Hospitality Leadership &amp; Complaint Mastery — Bandung</h3>
+            <p class="schedule-card__desc">Dirancang bagi supervisor, manager operasional, dan business owner untuk menyusun SOP dan standar kontrol kualitas layanan.</p>
+            <div class="schedule-card__details">
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <span>13 – 14 Desember 2026 (09:00 - 17:00 WIB)</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Pullman Grand Central, Bandung</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Kuota: 25 Peserta (<strong>Sisa 14 Kursi</strong>)</span>
+              </div>
             </div>
           </div>
           <div class="schedule-card__footer">
@@ -267,7 +269,7 @@
               <div class="schedule-progress__bar" style="width: 44%;"></div>
             </div>
             <span class="schedule-progress__text">11 dari 25 kursi terisi (Sisa 14 kursi)</span>
-            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.75rem; text-align: center; justify-content: center;">Daftar Batch Bandung</a>
+            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.25rem; text-align: center; justify-content: center;">Daftar Batch Bandung</a>
           </div>
         </div>
 
@@ -280,20 +282,22 @@
             </span>
             <span class="schedule-card__batch">Batch 04</span>
           </div>
-          <h3 class="schedule-card__title">Luxury Hospitality &amp; VVIP Guest Relations — Bali</h3>
-          <p class="schedule-card__desc">Standar pelayanan internasional kelas VVIP untuk hotel resor, beach club, villa mewah, dan restoran fine dining.</p>
-          <div class="schedule-card__details">
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              <span>10 – 11 Januari 2027 (09:00 - 17:00 WITA)</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>The Stones Hotel Legian, Bali</span>
-            </div>
-            <div class="schedule-card__detail">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Kuota: 25 Peserta (<strong>Pendaftaran Early Bird</strong>)</span>
+          <div class="schedule-card__body">
+            <h3 class="schedule-card__title">Luxury Hospitality &amp; VVIP Guest Relations — Bali</h3>
+            <p class="schedule-card__desc">Standar pelayanan internasional kelas VVIP untuk hotel resor, beach club, villa mewah, dan restoran fine dining.</p>
+            <div class="schedule-card__details">
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <span>10 – 11 Januari 2027 (09:00 - 17:00 WITA)</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>The Stones Hotel Legian, Bali</span>
+              </div>
+              <div class="schedule-card__detail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Kuota: 25 Peserta (<strong>Pendaftaran Early Bird</strong>)</span>
+              </div>
             </div>
           </div>
           <div class="schedule-card__footer">
@@ -301,7 +305,7 @@
               <div class="schedule-progress__bar" style="width: 20%; background: var(--amber-500);"></div>
             </div>
             <span class="schedule-progress__text">Early Bird dibuka (Diskon 25%)</span>
-            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.75rem; text-align: center; justify-content: center;">Klaim Early Bird Bali</a>
+            <a href="/#waitlist" class="btn btn--primary btn--sm" style="width: 100%; margin-top: 0.25rem; text-align: center; justify-content: center;">Klaim Early Bird Bali</a>
           </div>
         </div>
 
@@ -310,8 +314,11 @@
     </div>
   </section>
 
+  <!-- Section Divider with Pip -->
+  <div class="section-divider section-divider--center-pip"><span class="crosshair crosshair--center">+</span></div>
+
   <!-- ═══ FASILITAS PESERTA ═══ -->
-  <section class="about" style="background: var(--slate-50); padding: 4rem 0;">
+  <section class="about" style="background: var(--slate-50); padding: var(--section-py) 0;">
     <div class="container">
       <div class="section-header">
         <span class="pill pill--blue">Investasi Terbaik Tim Anda</span>
@@ -354,6 +361,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
 
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
