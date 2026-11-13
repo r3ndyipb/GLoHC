@@ -720,12 +720,12 @@ ul { list-style: none; }
   backface-visibility: hidden;
 }
 .float-card--top {
-  top: 12%;
+  top: 8%;
   right: clamp(15px, 2.5vw, 45px);
   animation: float-up 4s ease-in-out infinite;
 }
 .float-card--bottom {
-  bottom: 14%;
+  bottom: 24%;
   left: clamp(10px, 2%, 40px);
   animation: float-down 4.5s ease-in-out infinite;
 }
